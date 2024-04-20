@@ -1,0 +1,74 @@
+//kSmallSum.c
+//sum of k smallest number in arr
+
+#include<stdio.h>
+ 
+ int kSmallestSum(int k, int arr[]) {
+ 	
+ 	int sum=0;
+ 	
+ 	for (int i=0; i<k; i++) {
+ 		sum += arr[i];
+ 	}
+ 	printf("sum of the k smallest numbers is = %d", &sum);
+ 	
+ }
+ 
+ 
+ //kLargeSum.c
+//sum of k largest number in arr
+
+#include<stdio.h>
+ 
+ int kLargestSum(int k, int arr[], int n) {
+ 	
+ 	int sum=0;
+ 	
+ 	for (int i=n-1; i>k; i--) {
+ 		sum += arr[i];
+ 	}
+ 	printf("sum of the k largest numbers is = %d", &sum);
+ 	
+ }
+ 
+ 
+ //sort.c
+#include<stdio.h>
+
+void sortArr(int arr[], int n) {
+    int i, j;
+    for (i = 0; i < n-1; i++) {
+        for (j = 0; j < n-i-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+
+
+ //head.c
+ 
+ //sorting of arr
+ void sortArr(int arr[], int n);
+ 
+ void kLargestSum(int k, int arr[], int n);
+ 
+ void kSmallestSum(int k, int arr[]);
+ 
+ 
+//main.c
+#include<stdio.h>
+#include "head.h"
+
+void main() {
+	int arr[] = {2, 56, 32, 23, 89, 12, 66, 77,123, 20, 4};
+	
+	sortArr(arr, 11);
+	kSmallestSum(3, arr);
+	kLargestSum(4, arr, 11);
+
+}

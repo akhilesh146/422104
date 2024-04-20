@@ -1,0 +1,57 @@
+this is awk command
+ 
+awk '{ print ,  }' file1.txt 
+s01 10000
+s02 12000
+s03 11020
+s04 13000
+s05 19000
+s06 20000
+s07 25000
+s08 32000
+ 
+awk '{ sum +=  } END { print sum }' file1.txt 
+142020
+ 
+ awk '{ sum +=  } END { print sum/NR }' file1.txt
+17752.5
+ 
+awk '{ print substr(, 2, 3)}' file1.txt 
+01
+02
+03
+04
+05
+06
+07
+08
+ 
+awk '{ print  }' file1.txt 
+25
+24
+22
+23
+26
+25
+27
+28
+ 
+awk '{ if ( > 15000) { print senior } else { print junior } }' file1.txt 
+junior
+junior
+junior
+junior
+senior
+senior
+senior
+senior
+ 
+ awk 'function square(x) { return x*x } {print square() }' file1.txt
+625
+576
+484
+529
+676
+625
+729
+784

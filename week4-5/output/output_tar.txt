@@ -1,0 +1,15 @@
+tar command
+
+tar -cvf archive.tar example
+example/
+example/numbers.txt
+example/list1.txt
+example/out_numbers.txt
+example/list2.txt
+
+tar -xvf archive.tar
+example/
+example/numbers.txt
+example/list1.txt
+example/out_numbers.txt
+example/list2.txt

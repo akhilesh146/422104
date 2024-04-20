@@ -1,0 +1,3 @@
+hello this is file one from week 10
+it is the second last lab of the sem
+it is been good journey with the unix

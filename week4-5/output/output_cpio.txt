@@ -1,0 +1,25 @@
+cpio command
+
+find . -depth -print | cpio -o > archive.cpio
+cpio: File ./archive.cpio grew, 15872 new bytes not copied
+
+
+cpio -t < archive.cpio
+example/numbers.txt
+example/list1.txt
+example/out_numbers.txt
+example/list2.txt
+example
+file1.txt
+cpio.sh
+awk.sh
+sed.sh
+output_cpio.txt
+example2
+archive.tar
+output_sed.txt
+output_awk.txt
+output_tar.txt
+tar.sh
+archive.cpio
+.

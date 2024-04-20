@@ -1,0 +1,88 @@
+----static----
+
+gcc -c kSmallSum.c -o kSmallSum_obj.o
+
+gcc -c kLargeSum.c -o kLargeSum_obj.o
+
+gcc -c sort.c -o sort_obj.o
+
+gcc -c main.c -o main_obj.o
+
+ar rcs eg_static.a kSmallSum_obj.o kLargeSum_obj.o
+
+ls
+eg_dynamic.so
+eg_static.a
+head.h
+kLargeSum.c
+kLargeSum_obj.o
+kSmallSum.c
+kSmallSum_obj.o
+main.c
+main_obj.o
+main_result
+my_output.txt
+programCode.txt
+sort.c
+sort_obj.o
+static_dynamic_output.txt
+static_dynamic.sh
+
+gcc -o main_result main_obj.o -L. eg_static.a
+
+./main_result
+sum of the 4 smallest numbers is = 50 
+sum of the 2 largest numbers is = 220 
+
+ls
+eg_dynamic.so
+eg_static.a
+head.h
+kLargeSum.c
+kLargeSum_obj.o
+kSmallSum.c
+kSmallSum_obj.o
+main.c
+main_obj.o
+main_result
+my_output.txt
+programCode.txt
+sort.c
+sort_obj.o
+static_dynamic_output.txt
+static_dynamic.sh
+
+----dynamic----
+
+gcc *.o -shared -o eg_dynamic.so
+
+ls
+eg_dynamic.so
+eg_static.a
+head.h
+kLargeSum.c
+kLargeSum_obj.o
+kSmallSum.c
+kSmallSum_obj.o
+main.c
+main_obj.o
+main_result
+my_output.txt
+programCode.txt
+sort.c
+sort_obj.o
+static_dynamic_output.txt
+static_dynamic.sh
+
+gcc -o main_result main_obj.o -L. eg_dynamic.so
+
+./main_result
+sum of the 4 smallest numbers is = 50 
+sum of the 2 largest numbers is = 220 
+
+sudo cp eg_dynamic.so /usr/lib
+
+./main_result
+sum of the 4 smallest numbers is = 50 
+sum of the 2 largest numbers is = 220 
+

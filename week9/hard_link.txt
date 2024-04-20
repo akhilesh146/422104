@@ -1,0 +1,3 @@
+hello this is file 2
+this is for comparing the files
+let us write the files
